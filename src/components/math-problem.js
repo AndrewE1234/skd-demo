@@ -45,8 +45,8 @@ export default function MathProblem(props) {
   };
 
   return (
-    <div>
-      <p>
+    <div className="Problem-box">
+      <p className="Question">
         {leftOperand} + {rightOperand} =
       </p>
       <input
@@ -54,8 +54,12 @@ export default function MathProblem(props) {
         value={userAnswer}
         onKeyPress={handleKeyPress}
       />
-      <button onClick={handleOnClick}>Submit!</button>
-      <p>{answer}</p>
+      <button className="Submit-button" onClick={handleOnClick}>
+        Submit!
+      </button>
+      <p>
+        <b>{answer}</b>
+      </p>
     </div>
   );
 }
